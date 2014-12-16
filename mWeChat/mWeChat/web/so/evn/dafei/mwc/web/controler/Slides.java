@@ -11,4 +11,9 @@ public class Slides extends ABaseController {
 	public String getSlidesPage() {
 		return "basic_function/slides";
 	}
+	
+	@RequestMapping(value="/basic_function/add_slide", method=RequestMethod.GET)
+	public String getAddSlidePage() {
+		return "basic_function/add_slide";
+	}
 }

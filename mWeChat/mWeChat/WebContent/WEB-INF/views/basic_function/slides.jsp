@@ -23,15 +23,39 @@
 //-->  
 </style>
 <script type="text/javascript">
-<!--
 $(function() {
-	$( '#shuffle' ).button();
+	$('#slideLabelBtn').button();
+	$('#slideLabelBtn').attr('disabled',"true");
+	$('#addSlideBtn').button().on('click',function(){
+		$.get('basic_function/add_slide', function(result){
+		    $('#slideShowDiv').append(result);
+		    
+		});
+	});
 });
-//-->
+function addSlidesDia(diaId){
+	var selector = '#' + diaId; 
+	$(selector).dialog({
+		  appendTo: '#slideShowDiv',
+	      autoOpen: false,
+	      draggable: false,
+	      resizable: false
+	});
+	$(selector).dialog('open');
+	$('.ui-dialog', $('#slideShowDiv')).css('float','left');
+	$('.ui-dialog', $('#slideShowDiv')).css('position','relative');
+	$('.ui-dialog', $('#slideShowDiv')).css('top','0');
+	$('.ui-dialog', $('#slideShowDiv')).css('left','0');
+	$('.ui-dialog', $('#slideShowDiv')).css('margin-left','5px');
+	$('.ui-dialog', $('#slideShowDiv')).css('margin-top','5px');
+}
 </script>
-<div id="slidesWorkbench">
-<div id="slidesToolbar" class="ui-widget-header ui-corner-all">
-  <input type="checkbox" id="shuffle"><label for="shuffle">Shuffle</label>
+<div id="slidesWorkbench" style="width: 100%;height: auto;margin 0px;">
+<div id="slidesToolbar" class="ui-widget-header ui-corner-all" style="width: 99%;">
+  <input type="button" id="slideLabelBtn" value="幻灯片宣传页:">
+  <input type="button" id="addSlideBtn" value="创建一页">
+</div>
+<div id="slideShowDiv" style="width: 100%;height: auto;;margin 0px;">
 </div>
 </div>
 <!-- ============================================================================================ -->
