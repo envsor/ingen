@@ -33,6 +33,8 @@ body {
 <script type="text/javascript"
 	src="<c:url value="/resources/jquery/jquery-1.11.1.min.js"/>"></script>
 <script type="text/javascript"
+	src="<c:url value="/resources/jquery/jquery.form.js"/>"></script>	
+<script type="text/javascript"
 	src="<c:url value="/resources/jqueryui/jquery-ui.min.js"/>"></script>
 <script type="text/javascript"
 	src="<c:url value="/resources/layout/jquery.layout-latest.js"/>"></script>

@@ -1,4 +1,4 @@
-package so.evn.dafei.mwc.web.controler;
+package so.env.dafei.mwc.web.controler;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

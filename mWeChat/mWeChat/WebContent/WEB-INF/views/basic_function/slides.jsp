@@ -27,11 +27,13 @@ $(function() {
 	$('#slideLabelBtn').button();
 	$('#slideLabelBtn').attr('disabled',"true");
 	$('#addSlideBtn').button().on('click',function(){
-		$.get('basic_function/add_slide', function(result){
+		$.get('basic_function/slide/add', function(result){
 		    $('#slideShowDiv').append(result);
 		    
 		});
 	});
+	$( "#slideShowDiv" ).sortable();
+	$( "#slideShowDiv" ).disableSelection();
 });
 function addSlidesDia(diaId){
 	var selector = '#' + diaId; 
@@ -55,7 +57,7 @@ function addSlidesDia(diaId){
   <input type="button" id="slideLabelBtn" value="幻灯片宣传页:">
   <input type="button" id="addSlideBtn" value="创建一页">
 </div>
-<div id="slideShowDiv" style="width: 100%;height: auto;;margin 0px;">
+<div id="slideShowDiv">
 </div>
 </div>
 <!-- ============================================================================================ -->
