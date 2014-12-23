@@ -10,7 +10,7 @@
 		</layout>
 	</appender>
 	
-	<logger name="org.springframework.samples">
+	<logger name="so.env.dafei.mwc.web.controler">
 		<level value="debug" />
 	</logger>
 	

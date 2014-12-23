@@ -1,14 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<c:if test="${!ajaxRequest}">    
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>制作幻灯片</title>
-</head>
-<body>
-</c:if>
 <!-- ============================================================================================ -->
 <style type="text/css">
 <!--
@@ -41,7 +33,9 @@ function addSlidesDia(diaId){
 		  appendTo: '#slideShowDiv',
 	      autoOpen: false,
 	      draggable: false,
-	      resizable: false
+	      resizable: false,
+	      width: 320,
+	      height: 600
 	});
 	$(selector).dialog('open');
 	$('.ui-dialog', $('#slideShowDiv')).css('float','left');
@@ -61,7 +55,3 @@ function addSlidesDia(diaId){
 </div>
 </div>
 <!-- ============================================================================================ -->
-<c:if test="${!ajaxRequest}">
-</body>
-</html>
-</c:if>
